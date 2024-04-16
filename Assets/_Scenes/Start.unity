@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 17180865}
   - component: {fileID: 17180864}
   - component: {fileID: 17180863}
+  - component: {fileID: 17180866}
   m_Layer: 0
   m_Name: maxScreen_Btn
   m_TagString: Untagged
@@ -239,6 +240,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 17180861}
   m_CullTransparentMesh: 0
+--- !u!114 &17180866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17180861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909f8bb52e73ed14c95015591020b765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windowedNormalSprite: {fileID: 21300000, guid: e6ad97e08f895fe40885081ab61504ec,
+    type: 3}
+  windowedHoverSprite: {fileID: 21300000, guid: dc3278e43c4e43b46b5f0092fc2398ab,
+    type: 3}
+  fullscreenNormalSprite: {fileID: 21300000, guid: e6ad97e08f895fe40885081ab61504ec,
+    type: 3}
+  fullscreenHoverSprite: {fileID: 21300000, guid: e6ad97e08f895fe40885081ab61504ec,
+    type: 3}
 --- !u!1 &288402983
 GameObject:
   m_ObjectHideFlags: 0
