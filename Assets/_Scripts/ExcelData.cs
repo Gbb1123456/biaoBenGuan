@@ -209,6 +209,34 @@ public List<int> GetListMainDataid()
 
 
 
+public MainData GetMainDataTopTxt(string TopTxt)
+{
+    for (int i = 0; i < allMainData.Count; i++)
+    {
+        if (allMainData[i].TopTxt == TopTxt) 
+        {
+            return allMainData[i];
+        }
+    }
+    Debug.LogError(TopTxt);
+    return null;
+}
+
+public List<string> GetListMainDataTopTxt()
+{
+    List<string> res = new List<string>();
+    for (int i = 0; i < allMainData.Count; i++)
+    {
+        if (!res.Contains(allMainData[i].TopTxt)) 
+        {
+            res.Add(allMainData[i].TopTxt);
+        }
+    }
+    return res;
+}
+
+
+
 public MainData GetMainDataName(string Name)
 {
     for (int i = 0; i < allMainData.Count; i++)

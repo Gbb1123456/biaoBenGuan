@@ -6,6 +6,8 @@ namespace ZXKFramework
         //UID
 public int id;
 //名字
+public string TopTxt;
+//名字
 public string Name;
 //介绍
 public string Txt;
