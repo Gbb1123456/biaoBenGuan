@@ -256,9 +256,9 @@ MonoBehaviour:
     type: 3}
   windowedHoverSprite: {fileID: 21300000, guid: dc3278e43c4e43b46b5f0092fc2398ab,
     type: 3}
-  fullscreenNormalSprite: {fileID: 21300000, guid: e6ad97e08f895fe40885081ab61504ec,
+  fullscreenNormalSprite: {fileID: 21300000, guid: d7658a611af493740a1f67aabc807237,
     type: 3}
-  fullscreenHoverSprite: {fileID: 21300000, guid: e6ad97e08f895fe40885081ab61504ec,
+  fullscreenHoverSprite: {fileID: 21300000, guid: 859ee4dc4c1e182468c57bce8156332f,
     type: 3}
 --- !u!1 &104408799
 GameObject:
