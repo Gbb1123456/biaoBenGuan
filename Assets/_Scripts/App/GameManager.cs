@@ -32,7 +32,7 @@ public class GameManager : MonoSingleton<GameManager>
             Sprite sp = Resources.Load<Sprite>(main.SpritePath);
             if (string.IsNullOrEmpty(main.TopTxt) || string.IsNullOrEmpty(main.Txt) || sp == null)
             {
-                Debug.Log("上面三个判断有空，无法赋值，检查表中名字为：" + id);
+                Debug.LogError("上面三个判断有空，无法赋值，检查表中名字为：" + id);
             }
             else
             {
