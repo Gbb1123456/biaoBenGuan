@@ -73,7 +73,7 @@ public class BiaoDian : MonoBehaviour
             if (_b)
             {
                 mChangeIndex = GetInsertPos(_component, MExpalinTextLine[i].startCharIdx - 1, MExpalinTextLine[i - 1].startCharIdx);
-                // 在有标点的位置插入\n换行
+                //在有标点的位置插入\n换行
                 if (mChangeIndex > 0)
                     MExplainText.Insert(mChangeIndex, "\n");
             }
