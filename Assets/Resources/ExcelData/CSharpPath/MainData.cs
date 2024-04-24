@@ -13,6 +13,8 @@ namespace ZXKFramework
 public string Txt;
 //图片路径
 public string SpritePath;
+//语音路径
+public string SoundPath;
 
     }
 }

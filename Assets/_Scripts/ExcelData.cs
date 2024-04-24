@@ -321,6 +321,34 @@ public List<string> GetListMainDataSpritePath()
 
 
 
+public MainData GetMainDataSoundPath(string SoundPath)
+{
+    for (int i = 0; i < allMainData.Count; i++)
+    {
+        if (allMainData[i].SoundPath == SoundPath) 
+        {
+            return allMainData[i];
+        }
+    }
+    Debug.LogError(SoundPath);
+    return null;
+}
+
+public List<string> GetListMainDataSoundPath()
+{
+    List<string> res = new List<string>();
+    for (int i = 0; i < allMainData.Count; i++)
+    {
+        if (!res.Contains(allMainData[i].SoundPath)) 
+        {
+            res.Add(allMainData[i].SoundPath);
+        }
+    }
+    return res;
+}
+
+
+
 
     }
 }

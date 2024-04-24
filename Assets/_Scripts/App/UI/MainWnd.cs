@@ -12,6 +12,8 @@ public class MainWnd : UIBase
 
     Button exit_Btn;
     Button maxScreen_Btn;
+    Button help_Btn;
+    Button tiJiao_Btn;
 
     public override void Init(IUIManager uictrl)
     {
@@ -20,7 +22,17 @@ public class MainWnd : UIBase
         exit_Btn = transform.FindFirst<Button>("exit_Btn");
 
         maxScreen_Btn = transform.FindFirst<Button>("maxScreen_Btn");
+
+        help_Btn = transform.FindFirst<Button>("help_Btn");
+
+        tiJiao_Btn = transform.FindFirst<Button>("tiJiao_Btn");
+
+        help_Btn.onClick.AddListener(() =>
+        {
+            Game.Instance.uiManager.ShowUI<HelpWnd>();
+        });
     }
+
 
 
 }
