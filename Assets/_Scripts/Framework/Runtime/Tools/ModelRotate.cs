@@ -42,7 +42,7 @@ public class ModelRotate : MonoBehaviour
             Vector3 vaxis = Vector3.Cross(Vector3.forward, Vector3.right);
             transform.Rotate(vaxis, Input.GetAxis("Mouse X") * 7, Space.World);
             Vector3 haxis = Vector3.Cross(Vector3.forward, Vector3.up);
-            transform.Rotate(haxis, -Input.GetAxis("Mouse Y") * 7, Space.World);
+            //transform.Rotate(haxis, -Input.GetAxis("Mouse Y") * 7, Space.World);
         }
     }
     public void ResetPosAndRot()

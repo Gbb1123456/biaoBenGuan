@@ -31,7 +31,7 @@ public class MapWnd : UIBase
         RectTransform canvasRtm = targetParentRect.GetComponent<RectTransform>();
         float width = canvasRtm.sizeDelta.x;
         float height = canvasRtm.sizeDelta.y;
-        Debug.Log(target.transform.position);
+        //Debug.Log(target.transform.position);
         Vector3 pos = GameObject.Find("start").GetComponent<BiaoBenGuan>().Camera.WorldToScreenPoint(target.transform.position);
         pos.x *= width / Screen.width;
         pos.y *= height / Screen.height;

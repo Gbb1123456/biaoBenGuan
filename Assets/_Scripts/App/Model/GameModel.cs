@@ -9,6 +9,8 @@ public class GameModel : Model
 
     public ExcelData excel;
 
+    public GameObject lookModel;
+
     public void Init()
     {
         excel = new ExcelData();

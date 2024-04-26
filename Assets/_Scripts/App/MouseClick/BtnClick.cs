@@ -8,12 +8,25 @@ public class BtnClick : MonoBehaviour
 {
     Button btn;
 
+    public bool isLookModel;
+
     private void Start()
     {
         btn = GetComponent<Button>();
-        btn.onClick.AddListener(() =>
+        if (isLookModel)
         {
-            GameManager.Instance.ShowJieShaoWnd(gameObject);
-        });
+            btn.onClick.AddListener(() =>
+            {
+                GameManager.Instance.ShowGameModel(gameObject);
+            });
+        }
+        else
+        {
+            btn.onClick.AddListener(() =>
+            {
+                GameManager.Instance.ShowJieShaoWnd(gameObject);
+            });
+        }
+        
     }
 }

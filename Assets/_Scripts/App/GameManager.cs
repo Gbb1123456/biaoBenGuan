@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using ZXKFramework;
 
 public class GameManager : MonoSingleton<GameManager>
@@ -10,6 +11,16 @@ public class GameManager : MonoSingleton<GameManager>
 
     int id;
     bool isa = false;
+
+    [SerializeField]
+    public List<GameObject> allLookModel;
+
+    [SerializeField]
+    public PlayerMovement playerMove;
+
+    [SerializeField]
+    public LookWithMouse playerRot;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,8 +88,28 @@ public class GameManager : MonoSingleton<GameManager>
             if (!string.IsNullOrEmpty(main.SoundPath))
             {
                 Game.Instance.sound.PlayBGM(main.SoundPath, false);
+                return;
             }
             Game.Instance.uiManager.ShowUI<JieShaoWnd>(null, main.TopTxt, sp, main.Txt);
         }
+    }
+
+
+    public void ShowGameModel(GameObject go)
+    {
+        playerMove.enabled = false;
+        playerRot.enabled = false;
+        for (int i = 0; i < allLookModel.Count; i++)
+        {
+            allLookModel[i].SetActive(false);
+        }
+        transform.FindFirst("Look_Canvas").SetActive(true);
+
+        transform.FindFirst("Look_Canvas").FindFirst<Text>("biaoBenName_Txt").text = go.name;
+
+        GameObject g = transform.FindFirst("Model").FindFirst(go.name);
+        g.transform.localScale = Vector3.one;
+        g.SetActive(true);
+        gameModel.lookModel = g;
     }
 }

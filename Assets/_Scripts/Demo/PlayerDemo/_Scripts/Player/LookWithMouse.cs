@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
+
 public class LookWithMouse : MonoBehaviour
 {
     const float k_MouseSensitivityMultiplier = 0.01f;
@@ -16,7 +18,7 @@ public class LookWithMouse : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * k_MouseSensitivityMultiplier;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * k_MouseSensitivityMultiplier;
 
-        if (MouseButton1CtrlCameraMove && Input.GetMouseButton(1))
+        if (MouseButton1CtrlCameraMove && Input.GetMouseButton(1) && !EventSystem.current.IsPointerOverGameObject())
         {
             Move(mouseY, mouseX);
         }

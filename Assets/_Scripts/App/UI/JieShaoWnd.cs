@@ -26,7 +26,7 @@ public class JieShaoWnd : UIBase
         exit_Btn.onClick.AddListener(() =>
         {
             Game.Instance.uiManager.CloseUI<JieShaoWnd>();
-            Game.Instance.sound.StopBGM();
+            //Game.Instance.sound.StopBGM();
         });
     }
 
