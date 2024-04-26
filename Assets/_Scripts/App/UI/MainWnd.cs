@@ -31,6 +31,10 @@ public class MainWnd : UIBase
         {
             Game.Instance.uiManager.ShowUI<HelpWnd>();
         });
+        tiJiao_Btn.AddListener(() =>
+        {
+            Game.Instance.uiManager.ShowUI<ResultWnd>();
+        });
     }
 
 

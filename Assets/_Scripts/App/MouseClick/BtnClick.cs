@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ZXKFramework;
 using UnityEngine.UI;
+using SK.Framework;
 
 public class BtnClick : MonoBehaviour
 {
@@ -13,20 +15,20 @@ public class BtnClick : MonoBehaviour
     private void Start()
     {
         btn = GetComponent<Button>();
-        if (isLookModel)
+        btn.AddListener(() =>
         {
-            btn.onClick.AddListener(() =>
+            GameManager.Instance.transform.FindFirst("PlayerControllerFPS").GetComponent<FirstPersonController>().enabled = false;
+            if (isLookModel)
             {
                 GameManager.Instance.ShowGameModel(gameObject);
-            });
-        }
-        else
-        {
-            btn.onClick.AddListener(() =>
+                StartGame.Objstring.TryAdd(gameObject.name);
+            }
+            else
             {
                 GameManager.Instance.ShowJieShaoWnd(gameObject);
-            });
-        }
+            }
+        });
+        
         
     }
 }

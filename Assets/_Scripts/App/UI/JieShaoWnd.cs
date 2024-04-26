@@ -25,6 +25,7 @@ public class JieShaoWnd : UIBase
 
         exit_Btn.onClick.AddListener(() =>
         {
+            GameManager.Instance.transform.FindFirst("PlayerControllerFPS").GetComponent<FirstPersonController>().enabled = true;
             Game.Instance.uiManager.CloseUI<JieShaoWnd>();
             //Game.Instance.sound.StopBGM();
         });
