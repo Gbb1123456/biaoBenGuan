@@ -1,6 +1,7 @@
 ﻿using SK.Framework;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using ZXKFramework;
@@ -25,6 +26,7 @@ public class MapWnd : UIBase
     void Update()
     {
         targetParent.localPosition = GetScreenPosition(GameObject.Find("start").GetComponent<BiaoBenGuan>().PlayerControllerFPS);
+        targetParent.eulerAngles = new Vector3(0, 0, -GameObject.Find("start").GetComponent<BiaoBenGuan>().PlayerControllerFPS.transform.eulerAngles.y+180);
     }
     public Vector3 GetScreenPosition(GameObject target)
     {
