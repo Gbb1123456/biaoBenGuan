@@ -85,6 +85,12 @@ public class GameManager : MonoSingleton<GameManager>
         }
         else
         {
+            if (main.Name.Equals("昆虫世界")|| main.Name.Equals("牡丹江流域植物资源")|| main.Name.Equals("农作物")|| main.Name.Equals("稀树草原动物")||
+                main.Name.Equals("湿地动物")|| main.Name.Equals("森岭动物")|| main.Name.Equals("珍稀动物")|| main.Name.Equals("牡丹江流域野生动物"))
+            {
+                return;
+            }
+
             if (!string.IsNullOrEmpty(main.SoundPath))
             {
                 Game.Instance.sound.PlayBGM(main.SoundPath, false);
